@@ -1,0 +1,21 @@
+---
+title: "About"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Who am I?
+
+I am currently a second-year MPH student at Columbia Mailman.
+
+# Academic experience
+
+Research assistant, Columbia University
+
+Research assistant, Tsinghua University
+
+# Professional experience
+
+Intern, L.E.K. Consulting

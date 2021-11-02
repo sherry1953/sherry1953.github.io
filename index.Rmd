@@ -1,0 +1,30 @@
+---
+title: "Personal website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Introduction
+
+Hi! My name is Xinyan (Sherry) Zhou.
+
+Pronouns: she, her, hers
+
+Master of Public Health Candidate 2022
+
+Department of Epidemiology
+
+Columbia University Mailman School of Public Health
+
+Certificate | Applied Biostatistics and Public Health Data Science
+
+Teaching Assistant | ReMA Quantitative Foundations 2021
+
+# Interests
+
+Psychiatric epidemiology
+
+Cancer epidemiology
+
