@@ -14,7 +14,7 @@ library(p8105.datasets)
 library(plotly)
 ```
 
-We are only interested in orders on Sunday.
+For the following figures, We only focus on reordered orders on Sunday.
 
 ```{r}
 data("instacart")
@@ -31,11 +31,15 @@ Column {data-width=350}
 
 ### Chart A
 
+
 ```{r}
 instacart %>%
-  filter(department == "alcohol") %>%
-  plot_ly(x = ~aisle, y = ~order_hour_of_day, type = "scatter", mode = "markers",
-          alpha = .5)
+  count(aisle) %>%
+  filter(n > 5000) %>%
+  mutate(aisle = fct_reorder(aisle, n)) %>% 
+  mutate(count = n) %>%
+  plot_ly(x = ~aisle, y = ~count, type = "bar", color = ~aisle, alpha = 0.5, colors = "viridis"
+  )
 ```
 
 Column {data-width=350}
@@ -58,12 +62,9 @@ instacart %>%
 
 ```{r}
 instacart %>%
-  count(aisle) %>%
-  filter(n > 5000) %>%
-  mutate(aisle = fct_reorder(aisle, n)) %>% 
-  mutate(count = n) %>%
-  plot_ly(x = ~aisle, y = ~count, type = "bar", color = ~aisle, alpha = 0.5, colors = "viridis"
-  )
+  filter(department == "alcohol") %>%
+  plot_ly(x = ~aisle, y = ~order_hour_of_day, type = "scatter", mode = "markers",
+          alpha = .5)
 ```
 
 rmarkdown::render("dashboard.Rmd", output_format = "flexdashboard::flex_dashboard")
