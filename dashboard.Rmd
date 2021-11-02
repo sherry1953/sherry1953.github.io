@@ -45,6 +45,18 @@ Column {data-width=350}
 
 ### Chart B
 
+
+```{r}
+instacart %>%
+  filter(department == "alcohol") %>%
+  plot_ly(x = ~aisle, y = ~order_hour_of_day, type = "scatter", mode = "markers",
+          alpha = .5)
+```
+
+
+### Chart C
+
+
 ```{r}
 instacart %>%
   mutate(department = fct_reorder(department, order_hour_of_day)) %>% 
@@ -54,16 +66,4 @@ instacart %>%
     y = ~ order_hour_of_day, color = ~department, type = "violin",
     colors = "viridis")
 ```
-
-
-### Chart C
-
-```{r}
-instacart %>%
-  filter(department == "alcohol") %>%
-  plot_ly(x = ~aisle, y = ~order_hour_of_day, type = "scatter", mode = "markers",
-          alpha = .5)
-```
-
-rmarkdown::render("dashboard.Rmd", output_format = "flexdashboard::flex_dashboard")
 
