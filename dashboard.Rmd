@@ -14,8 +14,6 @@ library(p8105.datasets)
 library(plotly)
 ```
 
-For the following figures, We only focus on reordered orders on Sunday.
-
 ```{r}
 data("instacart")
 
