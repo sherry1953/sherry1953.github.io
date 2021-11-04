@@ -27,7 +27,7 @@ instacart =
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart A
+### Chart A: The count of orders in different aisles (only including aisles with a count of orderd greater than 5000 ) 
 
 
 ```{r}
@@ -43,7 +43,7 @@ instacart %>%
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Chart B: The hour of the day on which the order was placed among different aisles in department of alcohol
 
 
 ```{r}
@@ -54,7 +54,7 @@ instacart %>%
 ```
 
 
-### Chart C
+### Chart C: The hour of the day on which the order was placed among selected departments
 
 
 ```{r}
